@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter for Ma'am Roan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Ma'am Roan.</strong>
+                        <p>
+                            Thank you so much, Ma'am Roan, for the five months we spent together. 
+                            I deeply appreciate your dedication, guidance, and support throughout this time. 
+                            Our shared experiences and the lessons we've learnt have been truly meaningful,
+                            and I am grateful for the knowledge and wisdom you’ve imparted to us. 
+                            Thank you for being such an inspiring instructor. Happy holidays po ma'am and God bless po!
+                            <br>
+                            <p class="student-name">Sincerely yours, <br> <span class="name"> - Seigi Pascual</span></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+        <button class="open-letter-btn">Open Letter</button>
+        <audio src="bg-music.mp3" class="bg-music" loop></audio>
+    </div>
+    
+    <script>
+        const envelopeWrapper = document.querySelector('.envelope-wrapper');
+        const openLetterButton = document.querySelector('.open-letter-btn');
+        const bgMusic = document.querySelector('.bg-music');
+
+        openLetterButton.addEventListener('click', () => {
+            envelopeWrapper.classList.toggle('flap');
+            if (envelopeWrapper.classList.contains('flap')) {
+                bgMusic.play();
+            } else {
+                bgMusic.pause();
+                bgMusic.currentTime = 0;
+            }
+        });
+    </script>
+</body>
+</html>
